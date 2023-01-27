@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class ContactAdapter(var mList: ArrayList<Results>, function: () -> Unit) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+class ContactAdapter(var mList: ArrayList<Results>, val onContactClickListener: (contactName: String) -> Unit) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -31,6 +31,10 @@ class ContactAdapter(var mList: ArrayList<Results>, function: () -> Unit) : Recy
         val pp = itemsViewModel.picture?.large
         if (pp != null) {
             Picasso.get().load(pp).resize(150,150).into(holder.pp)
+        }
+
+        holder.itemView.setOnClickListener() {
+            itemsViewModel.name?.first?.let { it1 -> onContactClickListener(it1) }
         }
     }
 

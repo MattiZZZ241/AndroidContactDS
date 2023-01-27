@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">AndroidContactDS</string>
     <string name="affichage_des_contacts">Affichage des contacts</string>
+    <string name="pp">PP</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="nom">NOM</string>
+    <string name="icon">icon</string>
+    <string name="_000">000</string>
+    <string name="street">Street</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="email">Email</string>
 
     <string-array name="contact">
         <item>Jean</item>

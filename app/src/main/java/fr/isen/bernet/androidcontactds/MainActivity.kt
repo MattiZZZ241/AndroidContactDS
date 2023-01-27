@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.adapter = ContactAdapter(arrayListOf()) {
             val intent = Intent(this@MainActivity, ContactDetailsActivity::class.java)
-            intent.putExtra("contactName", "Rien")
+            intent.putExtra("contactFirstName", it)
             startActivity(intent)
         }
 
