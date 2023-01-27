@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AndroidContactDS</string>
+    <string name="affichage_des_contacts">Affichage des contacts</string>
+
+    <string-array name="contact">
+        <item>Jean</item>
+        <item>Paul</item>
+        <item>Marc</item>
+        <item>Pierre</item>
+        <item>Martin</item>
+    </string-array>
 </resources>
